@@ -1,0 +1,114 @@
+﻿@model IEnumerable<GBDashboard.Facesheet>
+
+@{
+    ViewBag.Title = "List of Facesheets";
+}
+<div style="font-family:Arial">
+
+<h2>List of Facesheets</h2>
+
+<p>
+    @Html.ActionLink("Create New Facesheet", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            Date of Service
+            @*@@Html.DisplayNameFor(model => model.date_of_service)*@
+        </th>
+        <th>
+            Description
+            @*@Html.DisplayNameFor(model => model.description)*@
+        </th>
+        <th>
+            Time In
+            @*@Html.DisplayNameFor(model => model.time_in)*@
+        </th>
+        <th>
+            Time Out
+            @*@Html.DisplayNameFor(model => model.time_out)*@
+        </th>
+        <th>
+            Notes
+            @*@Html.DisplayNameFor(model => model.notes)*@
+        </th>
+        <th>
+            Patient
+            @*@Html.DisplayNameFor(model => model.patient)*@
+        </th>
+        <th>
+            Source
+            @*@Html.DisplayNameFor(model => model.Facesheet_Source1.facesheet_source1)*@
+        </th>
+        <th>
+            Status
+            @*@Html.DisplayNameFor(model => model.Facesheet_Status.facesheet_status_name)*@
+        </th>
+        <th>
+            Insurance
+            @*@Html.DisplayNameFor(model => model.Insurance.insurance_name)*@
+        </th>
+        <th>
+            Location
+            @*@Html.DisplayNameFor(model => model.Location.location_name)*@
+        </th>
+        <th>
+            Payment
+            @*@Html.DisplayNameFor(model => model.Payment_Type1.payment_type1)*@
+        </th>
+        <th>
+            Customer Name
+            @*@Html.DisplayNameFor(model => model.Customer.customer_name)*@
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { facesheetId = item.facesheet_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-pencil" }) <br />
+            @Html.ActionLink("Details", "Details", new { facesheetId = item.facesheet_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-zoom-in" })<br />
+            @Html.ActionLink("Delete", "Delete", new { facesheetId = item.facesheet_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-remove" })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_of_service)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_in)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.time_out)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.patient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Facesheet_Source1.facesheet_source1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Facesheet_Status.facesheet_status_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insurance.insurance_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location.location_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Payment_Type1.payment_type1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.customer_name)
+        </td>
+    </tr>
+}
+
+</table>
+
+</div>

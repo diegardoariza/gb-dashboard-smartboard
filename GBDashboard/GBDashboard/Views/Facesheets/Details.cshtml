@@ -1,0 +1,157 @@
+﻿@model GBDashboard.Facesheet
+
+@{
+    ViewBag.Title = "Facesheet Details";
+}
+
+<h2>Facesheet Details</h2>
+
+<div>
+    <h4>Facesheet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Date of Service
+            @*@Html.DisplayNameFor(model => model.date_of_service)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_service)
+        </dd>
+
+        <dt>
+            Description
+            @*@Html.DisplayNameFor(model => model.description)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            Time In
+            @*@Html.DisplayNameFor(model => model.time_in)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_in)
+        </dd>
+
+        <dt>
+            Time Out
+            @*@Html.DisplayNameFor(model => model.time_out)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.time_out)
+        </dd>
+
+        <dt>
+            Notes
+            @*@Html.DisplayNameFor(model => model.notes)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
+            Patient
+            @*@Html.DisplayNameFor(model => model.patient)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.patient)
+        </dd>
+
+        <dt>
+            Source
+            @*@Html.DisplayNameFor(model => model.Facesheet_Source1.facesheet_source1)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facesheet_Source1.facesheet_source1)
+        </dd>
+
+        <dt>
+            Status
+            @*@Html.DisplayNameFor(model => model.Facesheet_Status.facesheet_status_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facesheet_Status.facesheet_status_name)
+        </dd>
+
+        <dt>
+            Insurance
+            @*@Html.DisplayNameFor(model => model.Insurance.insurance_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insurance.insurance_name)
+        </dd>
+
+        <dt>
+            Location
+            @*@Html.DisplayNameFor(model => model.Location.location_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.location_name)
+        </dd>
+
+        <dt>
+            Payment Type
+            @*@Html.DisplayNameFor(model => model.Payment_Type1.payment_type1)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment_Type1.payment_type1)
+        </dd>
+
+        <dt>
+            Customer Name
+            @*@Html.DisplayNameFor(model => model.Customer.customer_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.customer_name)
+        </dd>
+
+        <dt>
+            Support Image
+            @*@Html.DisplayNameFor(model => model.Facesheet_Support_Image)*@
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th></th>
+                    <th>File Name</th>
+                    <th>Creation Date</th>
+                    <th>Type</th>
+                </tr>
+                @foreach (var item in Model.Facesheet_Support_Image)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.is_active)
+                        </td>
+                        <td>
+                            @Html.ActionLink(item.Document_File.document_file_name, "DownloadSupportImage", new { path = item.Document_File.document_file_path })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Document_File.creation_date)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Document_File.document_type)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit Facesheet", "Edit", new { facesheetId = Model.facesheet_id, customerId = Model.customer_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

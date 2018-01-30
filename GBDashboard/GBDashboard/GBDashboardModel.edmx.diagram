@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c67bbfa2819144b58041a29c3875dddb" Name="Diagram1" ZoomLevel="85">
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Additional_Information" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Assigned_Employee" Width="1.5" PointX="9.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Key" Width="1.5" PointX="36.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Role" Width="1.5" PointX="3.125" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Source" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Status" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Facesheet_Support_Image" Width="1.5" PointX="38.25" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Insurance" Width="1.5" PointX="33.125" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Location" Width="1.5" PointX="35" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Payment_Type" Width="1.5" PointX="56.375" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GBDashboardModel.Procedure" Width="1.5" PointX="50.375" PointY="22.5" IsExpanded="true" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Additional_Information_Facesheet" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Assigned_Employee_Facesheet" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Facesheet_Source" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Facesheet_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Insurance" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Payment_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Support_Image_Facesheet" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Additional_Information_Facesheet_Key" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Assigned_Employee_Facesheet_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="GBDashboardModel.Facesheet_Procedure" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="GBDashboardModel.Employee" Width="1.5" PointX="9.625" PointY="1" />
+        <EntityTypeShape EntityType="GBDashboardModel.Employee_Role" Width="1.5" PointX="7.375" PointY="1.125" />
+        <AssociationConnector Association="GBDashboardModel.FK_Employee_Employee_Role" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Assigned_Employee_Employee" />
+        <AssociationConnector Association="GBDashboardModel.FK_Employee_Role_Employee_Role" />
+        <EntityTypeShape EntityType="GBDashboardModel.Accounting_Record" Width="1.5" PointX="15.625" PointY="8.375" />
+        <EntityTypeShape EntityType="GBDashboardModel.Accounting_Record_Additional_Information" Width="1.5" PointX="21.375" PointY="14.25" />
+        <EntityTypeShape EntityType="GBDashboardModel.Accounting_Record_Support_Document" Width="1.5" PointX="21.625" PointY="19.75" />
+        <EntityTypeShape EntityType="GBDashboardModel.App_Password" Width="1.5" PointX="24.25" PointY="3.875" />
+        <EntityTypeShape EntityType="GBDashboardModel.App_User" Width="1.5" PointX="26.5" PointY="0.875" />
+        <EntityTypeShape EntityType="GBDashboardModel.App_User_Role" Width="1.5" PointX="22.125" PointY="1.75" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer" Width="1.5" PointX="40.625" PointY="8.875" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Document_Type" Width="1.5" PointX="38.25" PointY="27.25" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Employee_Role" Width="1.5" PointX="15.625" PointY="2.125" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Facesheet_Key" Width="1.5" PointX="13.25" PointY="1.25" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Facesheet_Role" Width="1.5" PointX="8.25" PointY="2" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Facesheet_Source" Width="1.5" PointX="11" PointY="1.875" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Facesheet_Status" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Insurance" Width="1.5" PointX="55.625" PointY="15.625" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Location" Width="1.5" PointX="37.5" PointY="3.875" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Procedure" Width="1.5" PointX="53.25" PointY="19.625" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Property" Width="1.5" PointX="34.875" PointY="4.375" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Record_Category" Width="1.5" PointX="20.625" PointY="9.25" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Record_Type" Width="1.5" PointX="18" PointY="17.625" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Retention_Table" Width="1.5" PointX="35.375" PointY="25.125" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Status" Width="1.5" PointX="6.25" PointY="4" />
+        <EntityTypeShape EntityType="GBDashboardModel.Document_File" Width="1.5" PointX="31.625" PointY="20.5" />
+        <EntityTypeShape EntityType="GBDashboardModel.Document_Type" Width="1.5" PointX="35" PointY="22.125" />
+        <EntityTypeShape EntityType="GBDashboardModel.Procedure_Category" Width="1.5" PointX="53.125" PointY="22.625" />
+        <EntityTypeShape EntityType="GBDashboardModel.Record_Category" Width="1.5" PointX="23.375" PointY="17.375" />
+        <EntityTypeShape EntityType="GBDashboardModel.Record_Key" Width="1.5" PointX="15.625" PointY="5.125" />
+        <EntityTypeShape EntityType="GBDashboardModel.Record_Type" Width="1.5" PointX="20.25" PointY="17.25" />
+        <EntityTypeShape EntityType="GBDashboardModel.Retention_Table" Width="1.5" PointX="33.125" PointY="24.125" />
+        <EntityTypeShape EntityType="GBDashboardModel.Customer_Record_Key" Width="1.5" PointX="17.875" PointY="5.25" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Additional_Information_Accounting_Record" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Customer1" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Record_Category" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Record_Type" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Support_Document_Accounting_Record" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Additional_Information_Record_Key" />
+        <AssociationConnector Association="GBDashboardModel.FK_Accounting_Record_Support_Document_Document_File" />
+        <AssociationConnector Association="GBDashboardModel.FK_App_Password_App_User" />
+        <AssociationConnector Association="GBDashboardModel.FK_App_User_App_User_Role" />
+        <AssociationConnector Association="GBDashboardModel.FK_App_User_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_User_Role_User_Role" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Customer_Status" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Document_Type_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Employee_Role_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Key_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Role_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Source_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Status_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Insurance_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Location_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Procedure_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Property_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Category_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Key_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Type_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Employee_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Document_Type_Document_Type" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Employee_Role_Employee_Role" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Key_Facesheet_Key" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Role_Facesheet_Role" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Source_Facesheet_Source" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Facesheet_Status_Facesheet_Status" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Insurance_Insurance" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Location_Location" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Procedure_Procedure" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Category_Record_Category" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Type_Record_Type" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Retention_Table_Customer" />
+        <AssociationConnector Association="GBDashboardModel.FK_Document_File_Document_Type" />
+        <AssociationConnector Association="GBDashboardModel.FK_Facesheet_Support_Image_Document_File" />
+        <AssociationConnector Association="GBDashboardModel.FK_Document_Type_Retention_Table" />
+        <AssociationConnector Association="GBDashboardModel.FK_Procedure_Procedure_Category" />
+        <AssociationConnector Association="GBDashboardModel.FK_Record_Category_Record_Category" />
+        <AssociationConnector Association="GBDashboardModel.FK_Customer_Record_Key_Record_Key" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,72 @@
+﻿@model GBDashboard.Accounting_Record
+
+@{
+    ViewBag.Title = "Accounting Record Details";
+}
+
+<h2>Accounting Record Details</h2>
+
+<div>
+    <h4>Accounting Record Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Record Date
+            @*@Html.DisplayNameFor(model => model.record_date)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.record_date)
+        </dd>
+
+        <dt>
+            Amount
+            @*@Html.DisplayNameFor(model => model.amount)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+
+        <dt>
+            Description
+            @*@Html.DisplayNameFor(model => model.description)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+        <dt>
+            Customer Name
+            @*@Html.DisplayNameFor(model => model.Customer.customer_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.customer_name)
+        </dd>
+
+        <dt>
+            Category
+            @*@Html.DisplayNameFor(model => model.Record_Category.record_category_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Record_Category.record_category_name)
+        </dd>
+
+        <dt>
+            Type
+            @*@Html.DisplayNameFor(model => model.Record_Type.record_type_name)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Record_Type.record_type_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit Accounting Record", "Edit", new { accountingRecordId = Model.accounting_record_id, customerId = Model.customer_id  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

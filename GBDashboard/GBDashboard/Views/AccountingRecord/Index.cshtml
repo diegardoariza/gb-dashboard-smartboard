@@ -1,0 +1,69 @@
+﻿@model IEnumerable<GBDashboard.Accounting_Record>
+
+@{
+    ViewBag.Title = "List Of Accounting Records";
+}
+
+<h2>List Of Accounting Records</h2>
+
+<p>
+    @Html.ActionLink("Create New Acccounting Record", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+        <th>
+            Record Date
+            @* @Html.DisplayNameFor(model => model.record_date)*@
+        </th>
+        <th>
+            Amount
+            @*@Html.DisplayNameFor(model => model.amount)*@
+        </th>
+        <th>
+            Desription
+            @*@Html.DisplayNameFor(model => model.description)*@
+        </th>
+        <th>
+            Customer Name
+            @*@Html.DisplayNameFor(model => model.Customer.customer_name)*@
+        </th>
+        <th>
+            Category
+            @* @Html.DisplayNameFor(model => model.Record_Category.record_category_name)*@
+        </th>
+        <th>
+            Type
+            @*@Html.DisplayNameFor(model => model.Record_Type.record_type_name)*@
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { accountingRecordId = item.accounting_record_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-pencil" }) <br/>
+            @Html.ActionLink("Details", "Details", new { accountingRecordId = item.accounting_record_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-zoom-in" })<br />
+            @Html.ActionLink("Delete", "Delete", new { accountingRecordId = item.accounting_record_id, customerId = item.customer_id }, new { @class = "glyphicon glyphicon-remove" })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.record_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.customer_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Record_Category.record_category_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Record_Type.record_type_name)
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "GB Dashboard - SmartBoard";
+}
+
+<div class="jumbotron">
+    <h1>GB Dashboard - SmartBoard</h1>
+    <p class="lead">Our platform provides a solution that support healthcare customers with high quality automated tools that makes their lifes easier within a secure and reliable system supporting them.</p>
+    <p>@Html.ActionLink("Register Now", "Register", "Account", null, new { @class = "btn btn-primary btn-lg" })</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Fachesheet Management</h2>
+        <p>Maximize productivity and control over integrated a complete solutions that allows them to manage procedure facesheets information that they could access everywhere, with optimized configuration based on the requirements.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Accounting Records Management</h2>
+        <p>Keep track of cash flow by registering their expenses and income records to track how and where does money goes to improve their financial control on real-time.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Reporting Capabilities</h2>
+        <p>A single view platform that offers top management reports to allow doctors to have insigths related to his work based on the profit and loss for tax payment and other finantical needs to cover..</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <p>@Html.ActionLink("Try Now", "Create", "Facesheets", null, new { @class = "btn btn-dark" })</p>
+    </div>
+    <div class="col-md-4">
+        <p>@Html.ActionLink("Try Now", "Create", "AccountingRecord", null, new { @class = "btn btn-dark" })</p>
+    </div>
+    <div class="col-md-4">
+        <p>@Html.ActionLink("Try Now", "Index", "Reports", null, new { @class = "btn btn-dark" })</p>
+    </div>
+</div>
