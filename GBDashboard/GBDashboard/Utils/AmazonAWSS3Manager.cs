@@ -10,7 +10,7 @@ namespace GBDashboard.Utils
     {
         static string bucketName = ConfigurationManager.AppSettings["bucketName"].ToString();
         static string accessKeyID = ConfigurationManager.AppSettings["accessKeyID"].ToString();
-        static string secretAccessKey ConfigurationManager.AppSettings["secretAccessKey"].ToString();
+        static string secretAccessKey = ConfigurationManager.AppSettings["secretAccessKey"].ToString();
         static IAmazonS3 s3Client;
 
         internal static void PostFile(String filePath, String s3File, String contentType)
