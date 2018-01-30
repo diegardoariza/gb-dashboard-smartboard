@@ -8,9 +8,9 @@ namespace GBDashboard.Utils
 {
     internal static class AmazonAWSS3Manager
     {
-        static string bucketName = "hpenterprisetest";//ConfigurationManager.AppSettings["bucketName"].ToString();
-        static string accessKeyID = "AKIAJ4FQTZLY7CGQAAJQ";
-        static string secretAccessKey = "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";
+        static string bucketName = ConfigurationManager.AppSettings["bucketName"].ToString();
+        static string accessKeyID = ConfigurationManager.AppSettings["accessKeyID"].ToString();
+        static string secretAccessKey ConfigurationManager.AppSettings["secretAccessKey"].ToString();
         static IAmazonS3 s3Client;
 
         internal static void PostFile(String filePath, String s3File, String contentType)
